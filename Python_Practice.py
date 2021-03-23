@@ -44,8 +44,8 @@ with open(DataElect) as election_data:
     file_reader = csv.reader(election_data)
 #to print each row from the csv file
 
-    for row in file_reader:
-        print(row)
+    #for row in file_reader:
+        #print(row)
 #to print only the first row (important)
     #for row in file_reader:
         #print(row[0])
@@ -72,7 +72,7 @@ with open(DataElect) as election_data:
     
     for row in file_reader:
         total_votes += 1
-        print(total_votes)
+        #print(total_votes)
 #**********************************************************
 #TO PRINT EACH CANDIDATE NAME
 
@@ -84,6 +84,7 @@ DataElect = os.path.join("Resources","election_results.csv")
 DataSave = os.path.join("Analysis","election_analysis.txt")
 
 total_votes = 0
+
 candidate_options = []
 
 with open(DataElect) as election_data:
@@ -92,10 +93,16 @@ with open(DataElect) as election_data:
     headers = next(file_reader)
     
     for row in file_reader:
+        # Add to the total vote count.
         total_votes += 1
-#print candidate name from each row
+
+        # Print the candidate name from each row.
         candidate_name = row[2]
-#add the candidate name to the candidate list
-        candidate_options.append(candidate_name)
-#print the candidate list
+
+        # If the candidate does not match any existing candidate...
+        if candidate_name not in candidate_options:
+            # Add it to the list of candidates.
+            candidate_options.append(candidate_name)
+
+# Print the candidate list.
 print(candidate_options)

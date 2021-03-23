@@ -73,27 +73,53 @@ with open(DataElect) as election_data:
                     candidate_votes[candidate_name]= 0
 #To add a vote to that candidate's count
             candidate_votes[candidate_name] += 1
-#To determine the percentage of votes for each candidate           
-    for candidate_name in candidate_votes:
-        votes = candidate_votes[candidate_name]
-            #to get a percentage, convert votes and total_votes to floating-point
-            #because in the dictionary, votes and total votes are integer
-        vote_percentage = float(votes)/float(total_votes)*100
 
-                #determine if the votes are greater than the winning count
-        if(votes>winning_count) and (vote_percentage>winning_percentage):
 
-                #if true then set winning count = votes
-                winning_count = votes
-                winning_percentage = vote_percentage
-                winning_candidate = candidate_name
-#to do: print out the winning candidate, vote count and percentage to terminal.
-    Winnin_candidate_summary = (
-            f"-----------------------------\n"
-            f"Winner : {winning_candidate}\n"
-            f"Winning Vote Count : {winning_count:,}\n"
-            f"Winning Percentage :{winning_percentage:.1f}%\n"
-            f"------------------------------\n")        
-    
-    print(Winnin_candidate_summary)
+        #To determine the percentage of votes for each candidate           
+for candidate_name in candidate_votes:
+            votes = candidate_votes[candidate_name]
+                #to get a percentage, convert votes and total_votes to floating-point
+                #because in the dictionary, votes and total votes are integer
+            vote_percentage = float(votes)/float(total_votes)*100
+
+                        #determine if the votes are greater than the winning count
+            if(votes>winning_count) and (vote_percentage>winning_percentage):
+
+                        #if true then set winning count = votes
+                        winning_count = votes
+                        winning_percentage = vote_percentage
+                        winning_candidate = candidate_name
+
+            print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")        
+  #to do: print out the winning candidate, vote count and percentage to terminal.
+            Winnin_candidate_summary = (
+                f"-----------------------------\n"
+                f"Winner : {winning_candidate}\n"
+                f"Winning Vote Count : {winning_count:,}\n"
+                f"Winning Percentage :{winning_percentage:.1f}%\n"
+                f"------------------------------\n")        
+#print(Winnin_candidate_summary)
+import csv
+import os
+
+DataSave = os.path.join("Analysis","election_analysis.txt")
+
+myanalysis = open(DataSave,"w")
+
+election_results = (
+        f"\nElection Results\n"
+        f"-------------------------\n"
+        f"Total Votes: {total_votes:,}\n"
+        f"-------------------------\n")
+#print(election_results, end="")
+        # Save the final vote count to the text file.
+myanalysis.write(election_results)
+
+candidate_results = (f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n") 
+
+#print(candidate_results)
+
+myanalysis.write(candidate_results)
+
+
 
