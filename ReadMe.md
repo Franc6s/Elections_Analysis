@@ -17,6 +17,7 @@ the vote per candidate, the percentage vote per county and per candidate.
 * Arapahoe  : 24,801 votes. 6,7 % of total votes
   
 *The County with the largest number vote is Denver.
+
 ![image](https://user-images.githubusercontent.com/78506782/112102717-11c28400-8b7f-11eb-8e3c-dd147b296cee.png)
 
 ### Breakdown of votes per candidate
@@ -24,6 +25,7 @@ the vote per candidate, the percentage vote per county and per candidate.
 * Diana DeGette : 73,8 %. 272, 892 votes
 * Charles Casper Stockham : 23,0%. 85213 votes
 * Raymond Anthony Doane : 3,1% . 11,606 votes
+* 
 ![image](https://user-images.githubusercontent.com/78506782/112102761-21da6380-8b7f-11eb-8188-1c01f851762d.png)
 
 * The winner of the election is Diana DeGette with 73.8%
