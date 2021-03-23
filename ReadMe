@@ -1,4 +1,28 @@
-# The Purpose of this election is to figure out the winner of the election. The analysis was to generate the total vote count, the voter per county,
-  the vote per candidate, the percentage vote per county and per candidate.
-# Elections-Audit Results :
-    The total vote is 369711
+# Elections Analysis
+
+## Overview of the audit 
+
+The Purpose of this election is to figure out the winner of the election. The analysis was to generate the total vote count, the voter per county,
+the vote per candidate, the percentage vote per county and per candidate.
+
+## Elections-Audit Results :
+    
+* The total vote is 369711
+
+### Breakdown of votes per county
+
+* Denver    : 306,055 votes. 82.8 % of total votes
+* Jefferson : 38,855 votes. 10,5 % of total votes
+* Arapahoe  : 24,801 votes. 6,7 % of total votes
+  
+*The County with the largest number vote is Denver.
+
+### Breakdown of votes per candidate
+
+* Diana DeGette : 73,8 %. 272, 892 votes
+* Charles Casper Stockham : 23,0%. 85213 votes
+* Raymond Anthony Doane : 3,1% . 11,606 votes
+
+* The winner of the election is Diana DeGette with 73.8%
+
+## Elections_Audit Summary:
