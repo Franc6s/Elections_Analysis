@@ -1,5 +1,7 @@
 # Elections Analysis
 
+## Codes are located in the PyPoll_Challenge.py 
+
 ## Overview of the audit 
 
 The Purpose of this election is to figure out the winner of the election. The analysis was to generate the total vote count, the voter per county,
